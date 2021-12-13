@@ -1,0 +1,1283 @@
+@charset "utf-8";
+/* common */
+
+html,body{font-family: 'Nanum Gothic', sans-serif; color: #333;
+font-size: 16px; font-weight: 400; line-height: 1.4;}
+img{display: block;}
+a{text-decoration: none;}
+
+.inner{
+
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.btn{
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    transition: 0.4s;
+}
+.btn:hover{
+
+    background-color: #333;
+    color: #fff;
+}
+
+.btn.btn--reverse{
+
+    background-color: #333;
+    color: #fff;
+}
+
+.btn.btn--reverse:hover{
+
+    background-color: transparent;
+    color: #333;
+}
+
+.btn.btn--brown{
+color: #592818;
+border-color: #592818;
+
+}
+
+.btn.btn--brown:hover{
+
+    color: #fff;
+    background-color: #592818;
+}
+
+.btn.btn--gold{
+color: #fff;
+border-color: #fff;
+}
+
+.btn.btn--gold:hover{
+    color: #fff;
+    border-color: #fff;
+    }
+
+.btn.btn--white{
+
+    color: #fff;
+    border-color: #fff;
+}
+.btn.btn--white:hover{
+
+    color: #333;
+    background-color: #fff;
+}
+
+.back-to-position{
+    opacity: 0;
+    transition: 1s;
+}
+
+.back-to-position.to-right{
+    transform: translateX(-150px);
+}
+
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+
+.show .back-to-position{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.show .back-to-position.delay-0{
+transition-delay: 0s;
+}
+
+.show .back-to-position.delay-1{
+transition-delay: .3s;
+}
+
+.show .back-to-position.delay-2{
+
+    transition-delay: .6s;
+}
+
+.show .back-to-position.delay-3{
+
+    transition-delay: .9s;
+}
+
+
+
+/* header */
+header{
+
+    /* position: relative; */
+width: 100%;
+/* 가로너비를 최대한 사용하라 */
+    background-color: #f6f5f0;
+    border-bottom: 1px solid #c8c8c8;
+    position: fixed;
+    /* 브라우저의 뷰포트를 기준으로 배치하겠다 헤더라는 요소의 가로너비는 기본값이 auto이고
+    요소의 너비를 최대한 사용하는게 아니라 가로너비를 최소한으로 사용하려고한다
+    이현상은 position ab과 fixed에서 발생하게됨 일반적으로 block요소는 가로너비가 최대한 늘어날려고
+    시도하지만 ab과 fixed는 가로너비를 최소한으로 하려고해서 width를 무조건 100%사용하도록 해야함 */
+    top: 0;
+    z-index: 9;
+ 
+}
+
+header > .inner{
+    height: 120px;
+    width: 1100px;
+    margin: 0 auto;
+    /* width랑 마진 0 auto를 맞춰 가운데 정렬을 시킬수있음 */
+    position: relative;
+}
+
+header .inner .logo{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+height: 75px;
+}
+
+header .inner .logo img{}
+
+header .sub-menu{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+
+}
+
+header .sub-menu ul.menu{
+font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+
+}
+
+header .sub-menu ul.menu li{
+
+    position: relative;
+}
+header .sub-menu ul.menu li::before{
+
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+}
+
+header .sub-menu ul.menu li:first-child::before{
+    display: none;
+}
+
+
+header .sub-menu ul.menu li a{
+    display: block;
+    font-size: 12px; 
+    padding: 11px 16px;
+    color: #656565;
+    
+}
+
+header .sub-menu ul.menu li a:hover{
+
+    color: #000;
+
+}
+
+header .sub-menu .search{
+
+
+    height: 34px;
+    position: relative;
+}
+
+header .sub-menu .search input{
+
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    font-size: 12px;
+    transition: width .4s;
+}
+
+header .sub-menu .search input:focus{
+
+    width: 190px;
+    border-color: #669900;
+}
+
+header .sub-menu .search .material-icons{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    height: 24px;
+    transition: .4s;
+
+}
+
+header .sub-menu .search.focused .material-icons{
+/* .search태그에 focused클래스가부여됨(자바랑연동) .materail-icons가 opacity사라져라 */
+opacity: 0;
+}
+
+header .main-menu{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header .main-menu .item{
+
+
+}
+
+header .main-menu .item .item__name{
+padding: 10px 20px 34px 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+
+}
+
+header .main-menu .item:hover .item__name{
+background-color: #2c2a29;
+color: #669900;
+border-radius: 6px 6px 0 0;
+
+}
+
+header .main-menu .item .item__contents{
+width: 100%;
+position: fixed;
+/* 뷰포트를 기준으로 배치하겠다 
+웹브라우저의 왼족상단을 기준으로 위치값을 갖는다*/
+left: 0;
+/* top이나 bottom 속성을 사용하지 않아 수직 위치 값이 없다면
+요소의 원래 위치를 그대로 사용한다
+만약 position:absolute;를 사용했다면 (위치상) 부모요소기준으로 하므로
+화면의 뷰포트 좌우끝까지 늘어날수없게된다 */
+display: none;
+}
+
+header .main-menu .item:hover .item__contents{
+/* item에 호버를 하면 .item__contents가 display:block이되라 */
+    display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu{
+background-color: #2c2a29;
+
+}
+
+header .main-menu .item .item__contents .contents__menu > ul{
+
+display: flex;
+padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li{
+
+width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li h4{
+
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+    color: #fff;
+
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul{}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li{
+
+padding: 5px 0;
+font-size: 12px;
+color: #999;
+cursor: pointer;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover{
+
+    color: #669900;
+}
+
+header .main-menu .item .item__contents .contents__texture{
+font-size: 12px;
+padding: 26px 0;
+background-image: url(/images/main_menu_pattern.jpg);
+}
+
+header .main-menu .item .item__contents .contents__texture h4{
+color: #999;
+font-weight: 700;
+font-size: 12px;
+}
+
+header .main-menu .item .item__contents .contents__texture p{
+color: #669900;
+margin: 4px 0 14px;
+/* 마진에 값이 3개일때 상중하로 해석, 네개일땐 시계방향으로 상오하왼 */
+font-size: 12px;
+}
+
+header .badges{
+
+    position: absolute;
+    top: 132px;
+    right: 12px;
+
+}
+
+header .badges .badge{
+border-radius: 10px;
+/* img의 부모인 badge에 둥근선을 만들어놓는다 */
+overflow: hidden;
+/* 둥근선을 만들어놓고 사진이 그밖으로 넘치치 않게 한다 */
+margin-bottom: 12px;
+box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+cursor: pointer;
+}
+
+/* section = visual*/
+
+.visual{
+    margin-top: 120px;
+/* header>inner의 height값이다. header은 fixed된 상태로 계속 따라 다니기때문 */
+background-image: url(/images/visual_bg.jpg);
+background-position: center;
+}
+
+.visual .inner{
+
+    height: 646px;
+
+}
+
+.visual .inner .title{
+
+    position: absolute;
+    top: 88px;
+    left: -10px;
+
+}
+
+.visual .inner .title .btn{
+
+position: absolute;
+top: 259px;
+left: 173px;
+
+}
+
+.visual .cup1.image{
+
+    position: absolute;
+    bottom: 0;
+    right: -47px;
+
+}
+
+.visual .cup1.text{
+
+    position: absolute;
+    top: 38px;
+    right: 171px;
+
+}
+
+.visual .cup2.image{
+position: absolute;
+bottom: 0;
+right: 162px;
+
+}
+
+.visual .cup2.text{
+position: absolute;
+top: 321px;
+right: 416px;
+
+}
+
+.visual .spoon{
+
+    position: absolute;
+    bottom: 0;
+    left: 275px;
+
+}
+
+.visual .fade-in{
+
+    opacity: 0;
+}
+
+/* NOTICE */
+
+.notice{
+
+
+}
+
+.notice .notice-line{
+
+position: relative;
+}
+
+.notice .notice-line .bg-left{
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+background-color: #333;
+
+}
+
+.notice .notice-line .bg-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #f6f5ef;
+
+}
+
+.notice .notice-line .inner{
+    height: 62px;
+    /* border: 2px solid red; */
+    display: flex;
+    /* .inner안에 left right를 flex 시켜줌 */
+}
+
+.notice .notice-line .inner__left{
+    width: 60%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+
+}
+
+.notice .notice-line .inner__left h2{
+
+color: #fff;
+font-size: 17px;
+font-weight: 700;
+margin-right: 20px;
+
+}
+
+.notice .notice-line .inner__left .swiper-container{
+    overflow: hidden;
+    height: 62px;
+    flex-grow: 1;
+    /* 가로너비가 전혀없고 부모요소가 display flex이기 때문에 최대한 줄어들어 안보이는상태니
+    최대한 늘어나게 하기위해 flex grow 1을 준다. 그리고 flex를 주게되면 별도의 높이가 없으면
+     높이가 최대한 늘어나려고한다 플렉스의 기본값은 stretch*/
+}
+
+.notice .notice-line .inner__left .swiper-slide{
+height: 62px;
+display: flex;
+align-items: center;
+}
+
+.notice .notice-line .inner__left .swiper-slide a{
+    color: #fff;
+}
+
+
+.notice .notice-line .inner__left .notice-line__more{
+    width: 62px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    /* 아이템 수평정렬 */
+    align-items: center;
+    /* 한줄짜리 아이템 수직정렬 */
+
+}
+.notice .notice-line .inner__left .notice-line__more .material-icons{
+
+    color: #fff;
+    font-size: 30px;
+}
+
+.notice .notice-line .inner__right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.notice .notice-line .inner__right h2{
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.notice .notice-line .inner__right .toggle-promotion{
+    
+width: 62px;
+height: 62px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.notice .notice-line .inner__right .toggle-promotion .material-icons{
+
+    font-size: 30px;
+}
+
+
+.notice .promotion{
+
+    height: 693px;
+    background-color: #f6f5ef;
+    position: relative;
+    transition: height .4s;
+    overflow: hidden;
+}
+
+.notice .promotion.hide{
+
+    height: 0;
+}
+
+.notice .promotion .swiper-container{
+
+    width: calc(819px * 3 + 20px);
+    height: 553px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: calc((819px * 3 + 20px)/ -2);
+  
+    /* margin-left: calc((819px * 3 + 20px) / -2); */
+    /* swiper-container의 절반값, 무조건 화면 중간에서 보여야할때 left + margin-left값을 같이 주면서 만들수있음 */
+}
+
+.notice .promotion .swiper-slide{
+
+    opacity: .5;
+    transition: opacity 1s;
+    position: relative;
+}
+
+.notice .promotion .swiper-slide-active{
+
+    opacity: 1;
+}
+
+.notice .promotion .swiper-slide .btn{
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+
+}
+
+.notice .promotion .swiper-pagination{
+bottom: 40px;
+left: 0;
+right: 0;
+}
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet{
+background-image: url(/images/promotion_slide_pager.png);
+    width: 12px;
+    height: 12px;
+    margin-right:6px;
+    outline: none;
+    background-color: transparent;
+}
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child{
+margin-right: 0;
+}
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active{
+
+    background-image: url(/images/promotion_slide_pager_on.png);
+}
+
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next{
+
+    width: 42px;
+    height: 42px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 300px;
+    z-index: 1;
+cursor: pointer;
+outline: none;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: .4s;
+}
+
+.notice .promotion .swiper-prev{
+
+    left: 50%;
+    margin-left: -480px;
+}
+
+.notice .promotion .swiper-next{
+
+    right: 50%;
+    margin-right: -480px;
+}
+
+
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover{
+
+background-color: #333;
+color: #fff;
+}
+
+/* REWARDS */
+
+
+.rewards{
+
+position: relative;
+}
+
+.rewards .bg-left{
+width: 50%;
+height: 100%;
+background-color: #272727;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+.rewards .bg-right{
+    width: 50%;
+    height: 100%;
+    /* 너비는 부모크기(=뷰포트)만큼쓰고 높이값은 inner의 값만큼 쓰겠다 */
+    background-color: #d5c798;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.rewards .inner{
+
+    background-image: url(/images/rewards.jpg);
+    height: 241px;
+    /* 이너의 높이가 늘어남에 따라 배경의 높이도 같이 바뀌는데
+    이너부분의 부모요소인 리워드에 높이 값이 따로 없으니까
+    하이트 속성은 기본으로 오토이고 세로너비가 최대한 줄어들려고하니까
+    이너부분에 걸려서 높이가 241이 되는것이다.
+    배경들이 높이 100%로로 채우려고 하니까 이러한 구조를 가진다.
+    inner의 높이만 조절하면 위에를 제어할수있다 */
+    /* position:relative값 맨위에 commond으로 있음 까먹지말것 */
+}
+
+.rewards .btn-group{
+position: absolute;
+bottom: 24px;
+right: 0;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+/* flex-wrap속성은 나열된 요소들의 총 넓이가 부모넓이보다 클때
+이요소들은 다음줄에 이어서 나열해주는기능이다. */
+}
+
+.rewards .btn-group .btn.sign-up{
+
+    margin-right: 10px;
+    
+}
+
+.rewards .btn-group .btn.sign-in{
+
+    width: 110px;
+    
+}
+
+.rewards .btn-group .btn.gift{
+margin-top: 10px;
+flex-grow: 1;
+    
+}
+
+/* YOUTUBE VIDEO */
+.youtube{
+
+position: relative;
+height: 700px;
+background-color:#333;
+overflow: hidden;
+}
+
+.youtube .youtube__area{
+width:1920px;
+/* fullHD고려 */
+background-color: yellow;
+position: absolute;
+left: 50%;
+margin-left: calc(1920px / -2);
+/* 네모칸이 중간에 배치하는방법, 가로너비의 절반만큼 땡겨와야함 마이너스 주의 */
+top: 50%;
+margin-top: calc(1920px * 9 / 16 / -2);
+/* 부모세로값400px에 네모칸이 중앙으로 오기위해 절반만큼 위로 끄는법
+요소 정가운데 배치, 영상 정가운데만 보이게하기 */
+}
+
+.youtube .youtube__area::before{
+/* 가상선택자 그 선택된 태그만큼차지해서 가상공간만듬  */
+    content:"";
+    display: block;
+    /* before은 인라인요소 가로세로너비 갖을수없기때문 */
+    width:100%;
+    height: 0;
+    padding-top: 56.25%;
+    /* youtube내부요소에 높이의 값은 없지만 padding top으로 16:9비율의 요소가 만들어짐 */
+}
+
+.youtube .youtube__cover{
+
+background-image: url("../images/video_cover_pattern.png");
+background-color: rgba(0,0,0,.3);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+#player{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* 부모요소기준으로배치 */
+    top: 0;
+    left: 0;
+}
+
+.youtube .inner{
+height: 700px;
+
+}
+
+.youtube .floating1{
+
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.youtube .floating2{
+position: absolute;
+top: 350px;
+left: 150px;
+
+
+}
+
+
+/* SEASON PRODUCT */
+
+.season-product{
+background-image: url("/images/season_product_bg.jpg");
+
+}
+
+.season-product .inner{
+height: 400px;
+
+    
+}
+
+.season-product .floating3{
+    position: absolute;
+    top: -200px;
+    right: 0;
+    }
+
+
+.season-product .inner .text-group{
+
+    position: absolute;
+    top: 110px;
+    right: 100px;
+
+}
+
+.season-product .inner .text-group .title{
+margin-bottom: 10px;
+    
+}
+
+.season-product .inner .text-group .description{
+margin-bottom: 15px;
+    
+}
+
+.season-product .inner .text-group .more{
+
+    
+}
+
+/* RESERVE COFFEE */
+
+.reserve-coffee{
+background-image: url("/images/reserve_bg.jpg");
+
+}
+
+.reserve-coffee .inner{
+
+    height: 400px;
+    
+}
+
+.reserve-coffee .inner .reserve-logo{
+
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+
+.reserve-coffee .inner .text-group{
+
+    position: absolute;
+    top: 124px;
+    left: 208px;
+
+}
+
+.reserve-coffee .inner .product{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+
+/* PICK YOUR FAVORITE */
+
+.pick-your-favorite{
+
+background-image: url(/images/favorite_bg.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+/* 커버는 배경의 이미지를 요소에 더 넓은 너비에 맞춰 출력하겠다
+attachmentfixed했기에 화면뷰포트에 더 넓은 너비이미지에 맞춰 나온다 */
+}
+
+.pick-your-favorite .inner{
+
+    padding: 110px 0;
+
+    
+}
+
+.pick-your-favorite .inner .text-group{
+margin-left: 100px;
+    display: flex;
+    width: 360px;
+    flex-wrap: wrap;
+    /* 너비가 좁다면 줄바꿈할수있도록 */
+    justify-content: flex-end;
+    /* 해당영역 우측으로 붙어서 정렬 */
+    
+}
+
+.pick-your-favorite .inner .text-group .title{
+
+    margin-bottom: 40px;
+}
+
+.pick-your-favorite .inner .text-group .description{
+
+    margin-bottom: 40px;
+}
+
+/* RESERVE STORE */
+
+.reserve-store{
+
+    background-image: url(/images/reserve_store_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.reserve-store .inner{
+
+height: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.reserve-store .inner .medal{
+
+    width: 334px;
+    height: 334px;
+    perspective: 600px;
+/* 부모영역에 원근법줄것 */
+
+}
+
+
+.reserve-store .inner .medal .front,
+.reserve-store .inner .medal .back{
+
+    width: 334px;
+    height: 334px;
+    backface-visibility: hidden;
+    transition: 1s;
+    
+}
+
+
+.reserve-store .inner .medal .front{
+
+    position: absolute;
+    transform: rotateY(0deg);
+}
+
+.reserve-store .inner .medal:hover .front{
+
+    transform: rotateY(180deg);
+}
+
+.reserve-store .inner .medal .back{
+position: absolute;
+    transform: rotateY(-180deg);
+    
+}
+
+.reserve-store .inner .medal .back .btn{
+
+    position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+.reserve-store .inner .medal:hover .back{
+    transform: rotateY(0deg);
+}
+
+
+/* FIND THE STORE */
+
+.find-store{
+background-image: url(/images/find_store_bg.jpg);
+
+}
+
+.find-store .inner{
+
+    height: 400px;
+}
+
+.find-store .inner .texture1{
+
+    position: absolute;
+    top: 0;
+    left: 400px;
+    
+}
+
+.find-store .inner .texture2{
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.find-store .inner .picture{
+
+   border-radius: 50%;
+   /* 네모난 이미지를 동그란 이미지가 될수있도록 만들어준다 */
+   box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+   
+}
+
+.find-store .inner .picture1{
+position: absolute;
+top: -60px;
+left: 0;
+    
+}
+
+.find-store .inner .picture2{
+
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    
+}
+
+.find-store .inner .text-group{
+
+    position: absolute;
+    top: 120px;
+    left: 550px;
+    
+}
+
+.find-store .inner .text-group .title{
+
+    margin-bottom: 20px;
+    
+}
+
+.find-store .inner .text-group .description{
+    margin-bottom: 20px;
+    
+}
+
+/* AWARDS */
+
+.awards{
+background-color: #272727;
+
+}
+
+.awards .inner{
+
+    padding: 40px 0;
+}
+
+.awards .inner .swiper-container{
+
+    width: 100%;
+    height: 40px;
+    
+}
+
+.awards .swiper-prev,.swiper-next{
+
+width: 42px;
+height: 42px;
+border: 2px solid #fff;
+border-radius: 50%;
+outline: none;
+color: #fff;
+opacity: .3;
+cursor: pointer;
+
+display: flex;
+justify-content: center;
+/* 수평가운데 */
+align-items: center;
+/* 수직가운데 */
+
+position: absolute;
+top: 0;
+bottom: 0;
+margin: auto;
+/* 수직의 중간으로 맞추는 방식 : 포지션앱솔루트+위아래 0 + 마진 오토 (가운데배치) + 수직높이 */
+}
+
+.awards .swiper-prev{
+
+    left: -100px;
+
+}
+
+.awards .swiper-next{
+
+    right: -100px;
+}
+
+.awards .swiper-prev:hover,.swiper-next:hover{
+
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* FOOTER */
+
+footer{
+
+    background-color: #272727;
+    border-top: 1px solid #333;
+
+}
+
+footer .inner{
+
+    padding: 40px 0 60px 0;
+
+}
+
+footer .inner .menu{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+footer .inner .menu li{
+
+    position: relative;
+}
+
+footer .inner .menu li::before{
+    content: '';
+    width: 3px;
+    height: 3px;
+    background-color: #555;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+ 
+
+    /* display: block; 이미 position 를 사용해서 디스플레이가 블럭이됨 */
+    
+}
+
+footer .inner .menu li:first-child::before{
+display: none;
+}
+
+footer .inner .menu li a{
+
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px;
+    /* 인라인요소는 패딩 상하가 먹히지를 않음 그래서 디스플레이블럭해줌 */
+    display: block;
+    /* 사람들이 a (인라인태그) 요소를 큰범위에서 눌러주기위함 */
+    
+}
+
+footer .inner .menu li a.green {
+    color: green;
+}
+
+footer .btn-group{
+
+margin-top: 20px;
+display: flex;
+justify-content: center;
+/* 수평정렬 */
+
+}
+
+footer .btn-group .btn{
+
+font-size: 12px;
+margin-right: 10px;
+
+}
+
+footer .btn-group .btn:last-child{
+
+    margin-right: 0;
+}
+
+footer .info{
+/* span태그는 인라인블럭이기때문에 가로로 쌓임 */
+margin-top: 30px;
+text-align: center;
+}
+
+footer .info span{
+
+margin-right: 20px;
+color: #999;
+font-size: 12px;
+}
+
+footer .info span:last-child{
+    margin-right: 0;
+}
+
+footer .copyright{
+
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+footer .logo{ 
+
+    margin: 30px auto 0;
+    /* marginauto를 하려면 가로값을 알고있어야함 이미 img태그를썻다는건 가로값을 브라우저가 아니까
+    자동적으로 계산 */
+}
+
+#to-top{
+
+    width: 42px;
+    height: 42px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
+}
