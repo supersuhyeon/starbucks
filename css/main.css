@@ -640,7 +640,7 @@ margin-right: 0;
 }
 
 .notice .promotion .swiper-prev,
-.notice .promotion .swiper-next{
+.notice .promotion .swiper-next {
 
     width: 42px;
     height: 42px;
@@ -668,7 +668,6 @@ transition: .4s;
     right: 50%;
     margin-right: -480px;
 }
-
 
 .notice .promotion .swiper-prev:hover,
 .notice .promotion .swiper-next:hover{
