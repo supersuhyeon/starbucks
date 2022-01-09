@@ -481,6 +481,7 @@ footer .copyright{
 footer .logo{ 
 
     margin: 30px auto 0;
+    padding-bottom: 2rem;
     /* marginauto를 하려면 가로값을 알고있어야함 이미 img태그를썻다는건 가로값을 브라우저가 아니까
     자동적으로 계산 */
 }
