@@ -75,11 +75,6 @@ right: 416px;
 
 /* NOTICE */
 
-.notice{
-
-
-}
-
 .notice .notice-line{
 
 position: relative;
@@ -192,7 +187,6 @@ align-items: center;
 }
 
 .notice .notice-line .inner__right .toggle-promotion .material-icons{
-
     font-size: 30px;
 }
 
@@ -228,11 +222,12 @@ align-items: center;
 
     opacity: .5;
     transition: opacity 1s;
+    transition: 0.88s;
     position: relative;
 }
 
 .notice .promotion .swiper-slide-active{
-
+transform: scale(1.1);
     opacity: 1;
 }
 
@@ -278,12 +273,12 @@ margin-right: 0;
     position: absolute;
     top: 300px;
     z-index: 1;
-cursor: pointer;
-outline: none;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: .4s;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
 }
 
 .notice .promotion .swiper-prev{
@@ -292,8 +287,6 @@ transition: .4s;
     margin-left: -480px;
     border: 2px solid #999;
     color: #999;
-    
-
 }
 
 .notice .promotion .swiper-next{
@@ -368,21 +361,16 @@ right: 0;
 }
 
 .rewards .btn-group .btn.sign-up{
-
     margin-right: 10px;
-    
 }
 
 .rewards .btn-group .btn.sign-in{
-
     width: 110px;
-    
 }
 
 .rewards .btn-group .btn.gift{
 margin-top: 10px;
 flex-grow: 1;
-    
 }
 
 /* YOUTUBE VIDEO */

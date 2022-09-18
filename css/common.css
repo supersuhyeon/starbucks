@@ -65,10 +65,9 @@ border-color: #fff;
 .btn.btn--gold:hover{
     color: #fff;
     border-color: #fff;
-    }
+}
 
 .btn.btn--white{
-
     color: #fff;
     border-color: #fff;
 }
@@ -481,7 +480,16 @@ footer .copyright{
 footer .logo{ 
 
     margin: 30px auto 0;
-    padding-bottom: 2rem;
+    /* margin에 세 값이 있으면 상중하를 뜻함 위에있는 카피라이트와 로고 사이의 간격을 30픽셀로 띄워줬고 
+    가로를 정렬해주는 공식 중 margin 좌우를 auto로 하면 중간에오기때문에 상중하중 좌우를 맡고있는 중
+    에 auto값을 줘서 로고 이미지를 중간에 배치시킴. 패딩 바텀 2rem값을 갖고 밑에 여백을 갖게 되는데
+    그럴필요없으니 하 부분은 값 0으로 설정 
+    margin 가로로 수평 가운데 정렬하는법
+    1. 자식요소가 display block 일때
+    2. 자식요소의 width값이 명시되어있을때
+    3. 자식요소의 margin 좌우를 auto로 할것(0,auto)*/
     /* marginauto를 하려면 가로값을 알고있어야함 이미 img태그를썻다는건 가로값을 브라우저가 아니까
     자동적으로 계산 */
+    padding-bottom: 2rem;
+    
 }
