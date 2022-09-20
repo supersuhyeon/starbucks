@@ -115,6 +115,10 @@ function onYouTubePlayerAPIReady() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 ```
 
+### Reference Link
+
+[Starbucks-clone-coding-by-ParkYoungWoong](https://github.com/ParkYoungWoong/starbucks-vanilla-app)
+
 ### Self-reflection
 
 This was my first clone project implementing HTML, CSS, and basic Javascript grammar. I still remember how excited I was to learn about APIs because it saves a lot of time and makes my website look more dynamic. I'm very interested in learning more about the fundamentals behind these APIs so I can make my own in the future.
