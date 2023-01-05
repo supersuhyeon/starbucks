@@ -227,8 +227,9 @@ align-items: center;
 }
 
 .notice .promotion .swiper-slide-active{
-transform: scale(1.1);
+    transform: scale(1.1);
     opacity: 1;
+    z-index: 30;
 }
 
 .notice .promotion .swiper-slide .btn{
